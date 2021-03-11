@@ -1,0 +1,28 @@
+{
+  "name": "google_assistant",
+  "version": "0.1.0",
+  "description": "Assistant using typescript",
+  "author": "Mohamed Halat",
+  "main": "lib/index.js",
+  "scripts": {
+    "local": "ts-node ./src/server.ts",
+    "local:js": "node ./lib/server.js",
+    "build": "rm -rf ./lib/* && tsc"
+  },
+  "dependencies": {
+    "crypto-js": "^4.0.0",
+    "mysql": "2.18.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/crypto-js": "^4.0.1",
+    "@types/express": "^4.17.11",
+    "@types/mysql": "^2.15.17",
+    "@types/node": "^14.14.16",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "express": "^4.17.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}

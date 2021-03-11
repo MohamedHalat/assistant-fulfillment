@@ -1,0 +1,28 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+      "max-line-length": {
+          "options": [180]
+      },
+      "variable-name": {
+        "options": [
+          "ban-keywords",
+          "check-format",
+          "allow-snake-case"
+        ]
+      },
+      "radix": false,
+      "new-parens": true,
+      "no-console": false,
+      "prefer-const": false,
+      "no-arg": true,
+      "no-bitwise": true,
+      "no-conditional-assignment": true,
+      "no-consecutive-blank-lines": false
+  },
+  "jsRules": {
+      "max-line-length": {
+          "options": [180]
+      }
+  }
+}
