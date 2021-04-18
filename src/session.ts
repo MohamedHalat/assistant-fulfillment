@@ -25,7 +25,7 @@ export class Session {
   }
 
   async start(): Promise<DialogFlowResponse> {
-    if (this.user.id <= 0) {
+    if (this.user.isValidUser()) {
       this.response.message = "Invalid user";
       this.response.status = 401;
       return this.response;

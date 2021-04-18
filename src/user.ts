@@ -17,6 +17,13 @@ export class User {
     this.id = parseInt(decrypt(this.accessToken));
     this.storage = JSON.parse(user.userStorage);
   }
+
+  isValidUser(): boolean {
+    if (this.id < 1) return false;
+
+    return true;
+  }
+
 }
 
 function decrypt(encryptedCipherText: string) {
