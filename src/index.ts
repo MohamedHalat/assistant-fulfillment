@@ -8,7 +8,7 @@ const API_USERNAME = "";
 const REQUIRE_API_CREDENTIALS = false;
 
 export function dialogFlowFirebaseFulfillment(req: any, res: any) {
-  if (!isValidApiRequest(req.headers.authorization)) {
+  if (REQUIRE_API_CREDENTIALS && !isValidApiRequest(req.headers.authorization)) {
     res.status(401).send("Invalid API credentials");
     return;
   }
@@ -30,5 +30,5 @@ function isValidApiRequest(authorizationHeader: string): boolean {
   const buff = Buffer.from(authorizationHeader.substring(6), "base64");
   const [username, password] = buff.toString("ascii").split(":");
 
-  return REQUIRE_API_CREDENTIALS && username === API_USERNAME && password === API_PASSWORD;
+  return username === API_USERNAME && password === API_PASSWORD;
 }
